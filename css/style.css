@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 240px;
+  height: 100vh;
+  padding: 0 1.7rem;
+  color: #fff;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  background: rgb(0, 105, 0);
+}
+.logo {
+  height: 80px;
+  padding: 16px;
+}
+
+.category-title {
+  padding-top: 10%;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bolder;
+}
+.menu {
+  height: 88%;
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+.menu li {
+  padding: 1rem;
+  margin: 8px 0;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+.menu li:hover,
+.active {
+  background: lightgreen;
+}
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.menu a span {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+}
+.main--content {
+  position: relative;
+  background: rgb(238, 235, 235);
+  width: 100%;
+  padding: 1rem;
+
+  margin: 0 auto;
+}
+.header--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: rgb(238, 235, 235);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* card containter */
+.card--container {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+th,
+td {
+  width: 150px;
+  text-align: center;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.title {
+  color: grey;
+}
+.card--container_temp {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 25%;
+
+  margin-top: 20px;
+
+  display: inline-block;
+}
+.temp_txt {
+  font-size: 100px;
+  text-align: center;
+}
+.card--container_insectpup {
+  display: inline-block;
+  width: 70%;
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+  background: #fff;
+  margin-left: 50px;
+}
+
+.card--container_weather,
+.card--container_nextcapture,
+.card--container_replacetrap {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 25%;
+  position: relative;
+  margin-top: 20px;
+
+  display: inline-block;
+  margin: 20px;
+}
+.card--container_monitor {
+  border: 1px solid #4287f5;
+  float: left;
+  height: 200px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+#bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.card--container_devicereport {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 50%;
+
+  margin-top: 20px;
+
+  display: inline-block;
+}
+
+.devicereport_txt {
+  text-align: center;
+  margin-bottom: 63px;
+}
+.deviceconnected_txt {
+  text-align: center;
+  font-size: 90px;
+}
+
+.card--container_deviceconnected {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 25%;
+  margin-top: 20px;
+  margin-left: 40px;
+  display: inline-block;
+}
+
+.title_report {
+  color: grey;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+
+
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li class="active">
+                <a href="#">
+                    <i class="dashboard">
+                        <span>Dashboard</span>
+                    </i>
+                </a>
+            </li>
+            <ul class="category-title">
+                <span>Management</span>
+            </ul>
+            <li>
+                <a href="monitor_farm.html">
+                    <i class="fas fa-user">
+                        <span>Monitor Farm</span>
+                    </i>
+                </a>
+            </li>
+            <li>
+                <a href="manage_others.html">
+                    <i class="fas fa-chart-bar">
+                        <span>Manage Others</span>
+                    </i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title">
+                <h1>DASHBOARD</h1>
+            </div>
+        </div>
+        <div class="card--container">
+            <h2 class="main--title">Farm Overview</h2>
+            <div class="card--wrapper">
+                <div class="farmoverview--card">
+                    <div class="card--header">
+                        <span class="title">Farm Tracking Information</span>
+                    </div>
+                    <table farmoverview>
+                        <tr>
+                            <th>Farm Name</th>
+                            <th>Location</th>
+                            <th>Authorization</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>San Juan Farm</td>
+                            <td>San Juan Sta Cruz</td>
+                            <td>Owner</td>
+                            <td>Ok</td>
+                        </tr>
+                        <tr>
+                            <td>San Juan Farm</td>
+                            <td>San Juan Sta Cruz</td>
+                            <td>Owner</td>
+                            <td>Ok</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="card--container_temp">
+            <h2 class="main--title">Temperature</h2>
+            <div class="card--wrapper">
+                <div class="temperature--card">
+                    <div class="card--header">
+                        <span class="title">Santa Cruz Laguna</span>
+                    </div>
+                    <h2 class="temp_txt">26</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card--container_insectpup">
+            <h2 class="main--title">Insect Population</h2>
+            <div class="card--wrapper">
+                <div class="isect_pop--card">
+                    <div class="card--header">
+                        <span class="title">Number of Insect Captured per Month</span>
+                    </div>
+                    <h2 class="temp_txt">graph</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card--container_weather">
+            <h2 class="main--title">Weather</h2>
+            <div class="card--wrapper">
+                <div class="insect_pop--card">
+                    <div class="card--header">
+                        <span class="title">Sta. Cruz Laguna</span>
+                    </div>
+                    <h2>Sunny</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card--container_nextcapture">
+            <h2 class="main--title">Next Capture</h2>
+            <div class="card--wrapper">
+                <div class="insect_pop--card">
+                    <div class="card--header">
+                        <span class="title">Schedule of Sampling</span>
+                    </div>
+                    <h2>Monday</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card--container_replacetrap">
+            <h2 class="main--title">Replace Trap</h2>
+            <div class="card--wrapper">
+                <div class="insect_pop--card">
+                    <div class="card--header">
+                        <span class="title">Replace Trap On</span>
+                    </div>
+                    <h2>Thursday</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
