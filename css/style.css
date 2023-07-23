@@ -6,180 +6,388 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
-  display: flex;
-}
-
-.sidebar {
-  position: sticky;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 240px;
   height: 100vh;
-  padding: 0 1.7rem;
-  color: #fff;
-  overflow: hidden;
-  transition: all 0.5s linear;
-  background: rgb(0, 105, 0);
-}
-.logo {
-  height: 80px;
-  padding: 16px;
-}
-
-.category-title {
-  padding-top: 10%;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: bolder;
-}
-.menu {
-  height: 88%;
-  position: relative;
-  list-style: none;
-  padding: 0;
-}
-.menu li {
-  padding: 1rem;
-  margin: 8px 0;
-  border-radius: 8px;
-  transition: all 0.5s ease-in-out;
-}
-.menu li:hover,
-.active {
-  background: lightgreen;
-}
-.menu a {
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-.menu a span {
-  font-size: 1.2rem;
-  font-style: normal;
-  font-weight: 500;
-}
-.main--content {
-  position: relative;
-  background: rgb(238, 235, 235);
   width: 100%;
-  padding: 1rem;
-
-  margin: 0 auto;
+  background-color: #f0f2f5;
 }
-.header--wrapper {
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: start;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  background-color: #007837;
+  width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Sidebar Logo */
+.sidebar-logo {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.sidebar-logo img {
+  width: 120px;
+  height: 120px;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+  width: 100%;
+  padding: 0px 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #00c458;
+  border-radius: 10px;
+  padding: 10px 10px;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+button img {
+  width: 20px;
+  height: 20px;
+}
+
+button.active {
+  background-color: #00c458;
+  color: white;
+  pointer-events: none;
+}
+
+.sidebar-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #00a44a;
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+
+/* Main */
+.main {
+  flex-grow: 1;
+  height: 100px;
+  padding-left: 250px;
+}
+
+.gutter {
+  margin: 0px 20px;
+}
+
+/* Header */
+.header {
+  height: min-content;
+  padding: 40px 0px;
+  padding-top: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  background: rgb(238, 235, 235);
-  border-radius: 10px;
-  padding: 10px;
 }
 
-/* card containter */
-.card--container {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-th,
-td {
-  width: 150px;
-  text-align: center;
-  border: 1px solid white;
-  padding: 5px;
+.header > div:first-child {
+  font-size: 35px;
+  font-weight: 700;
 }
 
-.title {
-  color: grey;
-}
-.card--container_temp {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  width: 25%;
-
-  margin-top: 20px;
-
-  display: inline-block;
-}
-.temp_txt {
-  font-size: 100px;
-  text-align: center;
-}
-.card--container_insectpup {
-  display: inline-block;
-  width: 70%;
-  border-radius: 10px;
-  padding: 1rem;
-  position: relative;
-  background: #fff;
-  margin-left: 50px;
+/* Profile */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.card--container_weather,
-.card--container_nextcapture,
-.card--container_replacetrap {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  width: 25%;
-  position: relative;
-  margin-top: 20px;
-
-  display: inline-block;
-  margin: 20px;
+.profile > img:first-child {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
-.card--container_monitor {
-  border: 1px solid #4287f5;
-  float: left;
-  height: 200px;
+
+.profile > div {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.profile > img:last-child {
+  width: 20px;
+  height: auto;
+  transform: rotate(90deg);
+}
+
+/* Content */
+.content {
+  padding-bottom: 20px;
+}
+
+/* Card */
+.card {
+  min-height: 150px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  background-color: white;
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card-header div:first-child div:first-child {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card-header div:first-child div:nth-child(2) {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.5;
+  margin-top: -2px;
+}
+
+.card-header img {
+  height: 35px;
+}
+
+/* Cards Row */
+.cards-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.cards-row .card {
+  flex-grow: 1;
+}
+
+/* Farm Overview */
+.table-container {
+  max-height: 130px;
+  overflow-y: scroll;
+}
+table {
   width: 100%;
-  position: relative;
-  text-align: center;
+  text-align: left;
+  font-size: 16px;
 }
 
-#bottom {
+table th {
+  padding-bottom: 6px;
+}
+
+table td {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 0px;
+}
+
+table tr:last-child td {
+  padding-bottom: 0px;
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dddddd;
+  border-radius: 6px;
+  padding: 2px 10px;
+  min-height: 24px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.status.ok {
+  background-color: #d3e9dd;
+  color: #89bf9e;
+}
+
+.status.attention {
+  background-color: #fdd7ca;
+  color: #e79280;
+}
+
+/* Temperature */
+#temperature {
+  flex-grow: 1;
+  min-width: 260px;
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+#temperature > div:nth-child(2) {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+#temperature > div:nth-child(3) {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#temperature > div:nth-child(3) > img {
+  height: 18px;
+}
+
+#temperature > div:nth-child(3) > div {
+  color: #e68f7c;
+}
+
+#temperature > div:nth-child(3) div:last-child {
+  color: black;
+  opacity: 0.5;
+}
+
+/* Insect Population */
+#insect-population {
+  flex-grow: 1;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+}
+
+canvas {
   position: absolute;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Farm Image */
+.farm-image-container {
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.farm-image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.image-overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+  opacity: 0.8;
+  position: absolute;
   left: 0;
 }
 
-.card--container_devicereport {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  width: 50%;
-
-  margin-top: 20px;
-
-  display: inline-block;
+.farm-image-container div:last-child {
+  font-size: 35px;
+  font-weight: 700;
+  color: white;
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
 }
 
-.devicereport_txt {
+/* Device Report */
+#device-report {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+}
+
+#device-report .card-header {
+  margin-bottom: 0px;
+}
+
+#device-report > div:nth-child(2) {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 34px;
+}
+
+#device-report > div:nth-child(3) {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#device-report > div:nth-child(3) > img {
+  height: 18px;
+}
+
+#device-report > div:nth-child(3) > div {
+  color: #81bb97;
+}
+
+#device-report div:nth-child(3) > div:last-child {
+  color: black;
+  opacity: 0.5;
+}
+
+/* Device Connected */
+#device-connected {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+  max-width: 400px;
+}
+
+#device-connected .card-header {
+  margin-bottom: 0px;
+}
+
+#device-connected > div:nth-child(2) {
+  font-size: 70px;
+  font-weight: 700;
   text-align: center;
-  margin-bottom: 63px;
 }
-.deviceconnected_txt {
+
+#device-connected > a {
+  color: #6bb6ff;
   text-align: center;
-  font-size: 90px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.card--container_deviceconnected {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  width: 25%;
-  margin-top: 20px;
-  margin-left: 40px;
-  display: inline-block;
-}
-
-.title_report {
-  color: grey;
-}
+/* Devices */
