@@ -4,75 +4,69 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    
-    <title>Dashboard</title>
+    <title>Monitor Others</title>
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <div class="sidebar">
-        <div class="logo"></div>
-        <ul class="menu">
-            <li>
+    <!-- begin::Container -->
+    <div class="container">
+        <!-- begin::Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-logo">
+                <img src="./images/logo.png">
+            </div>
+            <div class="sidebar-menu">
                 <a href="index.html">
-                    <i class="dashboard">
-                        <span>Dashboard</span>
-                    </i>
+                    <button id="dashboard">
+                        <img src="./images/dashboard unselected.png">
+                        Dashboard
+                    </button>
                 </a>
-            </li>
-            <ul class="category-title">
-                <span>Management</span>
-            </ul>
-            <li>
+                <div class="sidebar-label">Management</div>
                 <a href="monitor_farm.html">
-                    <i class="fas fa-user">
-                        <span>Monitor Farm</span>
-                    </i>
+                    <button id="monitor-farm">
+                        <img src="./images/harvest unselected.png">
+                        Monitor Farm
+                    </button>
                 </a>
-            </li>
-
-
-            <li class="active">
                 <a href="manage_others.html">
-                    <i class="fas fa-chart-bar">
-                        <span>Manage Others</span>
-                    </i>
+                    <button id="manage-others" class="active">
+                        <img src="./images/growth selected.png">
+                        Manage Others
+                    </button>
                 </a>
-        </ul>
-    </div>
-
-    <div class="main--content">
-        <div class="header--wrapper">
-            <div class="header--title">
-                <h1>MANAGING OTHERS</h1>
             </div>
         </div>
+        <!-- end::Sidebar -->
 
-        <div>
-            <a href="add_farm.html">
-                <div class="card--container_temp">
-                    <h2 class="main--title">Add Farm</h2>
-                    <div class="card--wrapper">
-                        <div class="temperature--card">
-                            <div class="card--header">
-                                <span class="title">Add your farm</span>
-                            </div>
-                            <h2 class="temp_txt">+</h2>
-                        </div>
-                    </div>
+        <!-- begin::Main -->
+        <div class="main gutter">
+            <!-- begin::Header -->
+            <div class="header">
+                <div>Manage Others</div>
+                <div class="profile">
+                    <img src="https://images.wsj.net/im-491399?width=860&height=860">
+                    <div>Administrator</div>
+                    <img src="./images/chevron.png">
                 </div>
-            </a>
+            </div>
+            <!-- end::Header -->
 
+            <!-- begin::Content -->
+            <div class="content">
 
+            </div>
+            <!-- end::Content -->
 
         </div>
-
-
-
-
-
+        <!-- end::Main -->
 
     </div>
+    <!-- end::Container -->
 </body>
+
+<!-- Scripts -->
+<script src="./js/sidebar.js"></script>
 
 </html>

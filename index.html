@@ -4,136 +4,244 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width">
-    
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/style.css" />
-
-
 </head>
 
 <body>
-    <div class="sidebar">
-        <div class="logo"></div>
-        <ul class="menu">
-            <li class="active">
-                <a href="#">
-                    <i class="dashboard">
-                        <span>Dashboard</span>
-                    </i>
+    <!-- begin::Container -->
+    <div class="container">
+        <!-- begin::Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-logo">
+                <img src="./images/logo.png">
+            </div>
+            <div class="sidebar-menu">
+                <a href="index.html">
+                    <button id="dashboard" class="active">
+                        <img src="./images/dashboard selected.png">
+                        Dashboard
+                    </button>
                 </a>
-            </li>
-            <ul class="category-title">
-                <span>Management</span>
-            </ul>
-            <li>
+                <div class="sidebar-label">Management</div>
                 <a href="monitor_farm.html">
-                    <i class="fas fa-user">
-                        <span>Monitor Farm</span>
-                    </i>
+                    <button id="monitor-farm">
+                        <img src="./images/harvest unselected.png">
+                        Monitor Farm
+                    </button>
                 </a>
-            </li>
-            <li>
                 <a href="manage_others.html">
-                    <i class="fas fa-chart-bar">
-                        <span>Manage Others</span>
-                    </i>
+                    <button id="manage-others">
+                        <img src="./images/growth unselected.png">
+                        Manage Others
+                    </button>
                 </a>
-            </li>
-        </ul>
-    </div>
+            </div>
+        </div>
+        <!-- end::Sidebar -->
 
-    <div class="main--content">
-        <div class="header--wrapper">
-            <div class="header--title">
-                <h1>DASHBOARD</h1>
-            </div>
-        </div>
-        <div class="card--container">
-            <h2 class="main--title">Farm Overview</h2>
-            <div class="card--wrapper">
-                <div class="farmoverview--card">
-                    <div class="card--header">
-                        <span class="title">Farm Tracking Information</span>
-                    </div>
-                    <table farmoverview>
-                        <tr>
-                            <th>Farm Name</th>
-                            <th>Location</th>
-                            <th>Authorization</th>
-                            <th>Status</th>
-                        </tr>
-                        <tr>
-                            <td>San Juan Farm</td>
-                            <td>San Juan Sta Cruz</td>
-                            <td>Owner</td>
-                            <td>Ok</td>
-                        </tr>
-                        <tr>
-                            <td>San Juan Farm</td>
-                            <td>San Juan Sta Cruz</td>
-                            <td>Owner</td>
-                            <td>Ok</td>
-                        </tr>
-                    </table>
+        <!-- begin::Main -->
+        <div class="main gutter">
+            <!-- begin::Header -->
+            <div class="header">
+                <div>DASHBOARD</div>
+                <div class="profile">
+                    <img src="https://images.wsj.net/im-491399?width=860&height=860">
+                    <div>Administrator</div>
+                    <img src="./images/chevron.png">
                 </div>
             </div>
-        </div>
-        <div class="card--container_temp">
-            <h2 class="main--title">Temperature</h2>
-            <div class="card--wrapper">
-                <div class="temperature--card">
-                    <div class="card--header">
-                        <span class="title">Santa Cruz Laguna</span>
+            <!-- end::Header -->
+
+            <!-- begin::Content -->
+            <div class="content">
+                <!-- begin::Farm Overview -->
+                <div id="farm-overview" class="card">
+                    <div class="card-header">
+                        <div>
+                            <div>Farm Overview</div>
+                            <div>Farm Tracking Information</div>
+                        </div>
+                        <img src="./images/wheat.png">
                     </div>
-                    <h2 class="temp_txt">26</h2>
-                </div>
-            </div>
-        </div>
-        <div class="card--container_insectpup">
-            <h2 class="main--title">Insect Population</h2>
-            <div class="card--wrapper">
-                <div class="isect_pop--card">
-                    <div class="card--header">
-                        <span class="title">Number of Insect Captured per Month</span>
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>Farm Name</th>
+                                <th>Location</th>
+                                <th>Authorization</th>
+                                <th>Status</th>
+                            </tr>
+                            <tr>
+                                <td>San Juan Farm</td>
+                                <td>San Juan, Santa Cruz, Laguna</td>
+                                <td>Owner</td>
+                                <td>
+                                    <div class="status ok">OK</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>San Juan Farm</td>
+                                <td>San Juan, Santa Cruz, Laguna</td>
+                                <td>Owner</td>
+                                <td>
+                                    <div class="status attention">Attention</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>San Juan Farm</td>
+                                <td>San Juan, Santa Cruz, Laguna</td>
+                                <td>Owner</td>
+                                <td>
+                                    <div class="status attention">Attention</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>San Juan Farm</td>
+                                <td>San Juan, Santa Cruz, Laguna</td>
+                                <td>Owner</td>
+                                <td>
+                                    <div class="status ok">OK</div>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <h2 class="temp_txt">graph</h2>
                 </div>
-            </div>
-        </div>
-        <div class="card--container_weather">
-            <h2 class="main--title">Weather</h2>
-            <div class="card--wrapper">
-                <div class="insect_pop--card">
-                    <div class="card--header">
-                        <span class="title">Sta. Cruz Laguna</span>
+                <!-- end::Farm Overview -->
+
+                <!-- begin::Cards Row -->
+                <div class="cards-row">
+                    <!-- begin::Temperature -->
+                    <div id="temperature" class="card">
+                        <div class="card-header">
+                            <div>
+                                <div>Temperature</div>
+                                <div>Santa Cruz, Laguna</div>
+                            </div>
+                            <img src="./images/temperature.png">
+                        </div>
+                        <div>28°C</div>
+                        <div>
+                            <img src="./images/trend up negative.png">
+                            <div>1°C</div>
+                            <div>Since Yesterday</div>
+                        </div>
                     </div>
-                    <h2>Sunny</h2>
-                </div>
-            </div>
-        </div>
-        <div class="card--container_nextcapture">
-            <h2 class="main--title">Next Capture</h2>
-            <div class="card--wrapper">
-                <div class="insect_pop--card">
-                    <div class="card--header">
-                        <span class="title">Schedule of Sampling</span>
+                    <!-- end::Temperature -->
+                    <!-- begin::Insect Population -->
+                    <div id="insect-population" class="card">
+                        <div class="card-header">
+                            <div>
+                                <div>Insect Population</div>
+                                <div>Number of Insects Captured per Month</div>
+                            </div>
+                            <img src="./images/insect.png">
+                        </div>
+                        <div class="chart-container" style="height: 200px;">
+                            <canvas id="insect-population-chart"></canvas>
+                        </div>
                     </div>
-                    <h2>Monday</h2>
+                    <!-- end::Insect Population -->
                 </div>
-            </div>
-        </div>
-        <div class="card--container_replacetrap">
-            <h2 class="main--title">Replace Trap</h2>
-            <div class="card--wrapper">
-                <div class="insect_pop--card">
-                    <div class="card--header">
-                        <span class="title">Replace Trap On</span>
+                <!-- end::Cards Row -->
+
+                <!-- begin::Cards Row -->
+                <div class="cards-row">
+                    <!-- begin::Weather -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <div>Weather</div>
+                                <div>Santa Cruz, Laguna</div>
+                            </div>
+                            <img src="./images/clouds.png">
+                        </div>
                     </div>
-                    <h2>Thursday</h2>
+                    <!-- end::Weather -->
+                    <!-- begin::Next Capture -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <div>Next Capture</div>
+                                <div>Schedule of Sampling</div>
+                            </div>
+                            <img src="./images/clock.png">
+                        </div>
+                    </div>
+                    <!-- end::Next Capture -->
+                    <!-- begin::Replace Trap -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <div>Replace Trap</div>
+                                <div>Replace Trap On</div>
+                            </div>
+                            <img src="./images/mosquito.png">
+                        </div>
+                    </div>
+                    <!-- end::Replace Trap -->
                 </div>
+                <!-- end::Cards Row -->
             </div>
+            <!-- end::Content -->
+
         </div>
+        <!-- end::Main -->
+
     </div>
+    <!-- end::Container -->
 </body>
+
+<!-- Scripts -->
+<script src="./js/sidebar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('insect-population-chart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [{
+                    label: 'Recorded',
+                    data: [12, 19, 3, 5, 2, 3, null, null, null, null, null, null],
+                    backgroundColor: ['#007837'],
+                    borderWidth: 0,
+                },
+                {
+                    label: 'Predicted',
+                    data: [null, null, null, null, null, null, 3, 3, 3, 4, 5, 6],
+                    backgroundColor: ['#c4820a'],
+                    borderWidth: 0,
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                }
+            },
+            scales: {
+                y: {
+                    display: false,
+                    beginAtZero: true,
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                },
+                y: {
+                    grid: {
+                        display: false
+                    }
+                }
+            },
+        }
+    });
+</script>
 
 </html>
